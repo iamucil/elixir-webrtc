@@ -53,6 +53,6 @@ config :elixir_webrtc, AudioVideoChat.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "hdig8g4g49htuhe",
-  database: "postgres",
+  database: "webrtc",
   hostname: "localhost",
   pool_size: 10
