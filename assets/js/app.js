@@ -61,7 +61,8 @@ function setupPeerConnection() {
 
     let servers = {
         "iceServers": [{
-            "url": "stun:stun.l.google.com:19302"
+            // "url": "stun:stun.l.google.com:19302"
+            "url": "stun:13.229.116.138:3478"
         }]
     };
 
