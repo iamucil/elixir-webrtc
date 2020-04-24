@@ -7,6 +7,7 @@
     <title>PHXWebRTC · Phoenix Framework</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script src="//cdn.temasys.com.sg/adapterjs/0.10.x/adapter.debug.js"></script>
   </head>
   <body>
     <header>

@@ -2,10 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :phx_webrtc, PHXWebRTC.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "phx_webrtc_dev",
-  hostname: "localhost",
+  username: System.get_env("DB_USERNAME"),
+  password: System.get_env("DB_PASSWORD"),
+  database: System.get_env("DB_NAME"),
+  hostname: System.get_env("DB_HOST"),
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -16,7 +16,7 @@ config :phx_webrtc, PHXWebRTC.Repo,
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :phx_webrtc, PHXWebRTCWeb.Endpoint,
-  http: [port: 4000],
+  http: [port:  System.get_env("HOST_PORT", "5000")],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,

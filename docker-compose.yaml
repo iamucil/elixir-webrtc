@@ -1,0 +1,26 @@
+version: "3.1"
+
+services:
+  phx-webrtc-db:
+    image: postgres:10.7-alpine
+    ports:
+      - "6432:5432"
+    environment:
+      - POSTGRES_DB=phx_webrtc_dev
+      - POSTGRES_USER=webrtc
+      - POSTGRES_PASSWORD=hdig8g4g49htuhe
+  phx-webrtc-site:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "5000:5000"
+    restart: on-failure
+    depends_on:
+      - phx-webrtc-db
+    environment:
+      - HOST_PORT=5000
+      - DB_USERNAME=webrtc
+      - DB_PASSWORD=hdig8g4g49htuhe
+      - DB_NAME=phx_webrtc_dev
+      - DB_HOST=phx-webrtc-db

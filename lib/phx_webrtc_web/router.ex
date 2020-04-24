@@ -16,7 +16,8 @@ defmodule PHXWebRTCWeb.Router do
   scope "/", PHXWebRTCWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    # get "/", PageController, :index
+    get "/", CallController, :index
   end
 
   # Other scopes may use custom stacks.
