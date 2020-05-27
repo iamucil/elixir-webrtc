@@ -1,11 +1,18 @@
-# Audio Video Chat
+# Elixir Phoenix - Audio Video Chat
 
-To start your Phoenix server:
+> Elixir v1.10 or above
 
-  * Setup the project with `mix setup`
-  * Start Phoenix endpoint with `mix phx.server`
+## Usage
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Clone this repository and build docker image.
+
+```
+docker-compose up --build --abort-on-container-exit --remove-orphans
+```
+
+Command above will create 2 containers, database container and web container.
+
+Now you can visit [`localhost:5000`](http://localhost:5000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
